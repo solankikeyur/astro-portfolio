@@ -1,0 +1,19 @@
+---
+const {socialLinks} = Astro.props;
+---
+<div id="home" class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8 wow fadeIn" data-wow-delay="0.9s">
+        <h1 class="rotate">Hi, My name is Keyur Solanki</h1>
+        <h2 class="">I'm a Web developer from India.</h2>
+        <a href={socialLinks.facebook} class="fa fa-facebook" target="_blank"></a>
+        <a href={socialLinks.linkedin} class="fa fa-linkedin" target="_blank"></a>
+        <a href={socialLinks.instagram} class="fa fa-instagram" target="_blank"></a>
+        <a href={socialLinks.github} class="fa fa-github" target="_blank"></a>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+</div>

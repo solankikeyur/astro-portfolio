@@ -1,0 +1,84 @@
+---
+import crypto from "../images/crypto.jpg";
+import cart from "../images/cart.jpg";
+import invoice from "../images/invoice.jpg";
+
+const projects = [
+  {
+    name: "Crypto App",
+    techStack: "ReactJS, Axios, Chakra UI",
+    url: "https://crypto-eta-nine.vercel.app/",
+    github: "https://github.com/solankikeyur/react-project-three",
+    image: crypto,
+  },
+  {
+    name: "Redux Cart",
+    techStack: "ReactJS, Axios, redux-toolkit, Bootstrap",
+    url: "https://project-four-chi.vercel.app/",
+    github: "https://github.com/solankikeyur/react-project-four",
+    image: cart,
+  },
+  {
+    name: "Invoice Creator",
+    techStack: "ReactJS Frontend and Laravel API",
+    github: "https://github.com/solankikeyur/invoicee",
+    laravelGithub : "https://github.com/solankikeyur/invoicee-api",
+    image: invoice,
+  },
+];
+---
+<div id="portfolio" class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="wow bounce">Some Project(s)</h2>
+      </div>
+      {
+        projects.map((project) => (
+          <div class="col-md-4 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
+            <div class="portfolio-thumb">
+              <img
+                src={project.image}
+                class="img-responsive"
+                alt="portfolio img"
+                style="height: 240px"
+              />
+              <div class="portfolio-overlay">
+                <h4>{project.name}</h4>
+                <h5>Tech Stack: {project.techStack}</h5>
+                {project.url && (
+                  <h5>
+                    <a href={project.url} target="_blank" style="color: white">
+                      Open App
+                    </a>
+                  </h5>
+                )}
+                { project.laravelGithub && (
+                  <h5>
+                  <a
+                    href={project.laravelGithub}
+                    target="_blank"
+                    style="color: white"
+                  >
+                    Laravel Github Link
+                  </a>
+                </h5>
+                ) }
+                <h5>
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    style="color: white"
+                  >
+                    Github Link
+                  </a>
+                </h5>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  <!-- end portfolio -->
+</div>

@@ -1,15 +1,35 @@
 ---
+import Home from "../components/Home.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Footer from "../components/Footer.astro";
+import About from "../components/About.astro";
+import Projects from "../components/Projects.astro";
+
+const socialLinks = {
+  facebook : "https://www.facebook.com/keyur.solanki.735/",
+  github : "https://github.com/solankikeyur/",
+  instagram : "https://www.instagram.com/_solanki_keyur_/",
+  linkedin : "https://www.linkedin.com/in/solankikeyur8/"
+}
+
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout >
+	
+  <!-- start home -->
+  <Home socialLinks = {socialLinks} />
+  <!-- end home -->
+
+  <!-- start about -->
+  <About />
+  <!-- end about -->
+
+  <!-- start projects  -->
+  <Projects />
+  <!-- end projects -->
+
+  <!-- start footer -->
+  <Footer socialLinks = {socialLinks} />
+  <!-- end footer -->
+
+</BaseLayout>

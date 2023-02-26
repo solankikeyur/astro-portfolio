@@ -1,0 +1,17 @@
+---
+const {socialLinks} = Astro.props;
+---
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 wow">
+        <ul class="social-icon">
+          <li><a href={socialLinks.facebook} class="fa fa-facebook" target="_blank"></a></li>
+          <li><a href={socialLinks.linkedin} class="fa fa-linkedin" target="_blank"></a></li>
+          <li><a href={socialLinks.instagram} class="fa fa-instagram" target="_blank"></a></li>
+          <li><a href={socialLinks.github} class="fa fa-github" target="_blank"></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
